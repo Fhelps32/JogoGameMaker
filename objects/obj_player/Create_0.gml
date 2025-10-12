@@ -95,16 +95,7 @@ attack = noone;
 dir = 0;
 
 in_dialougue = false;
-inventario_aberto = false;
 
-inventario = [];
-for (var i = 0; i < 16; i++) {
-    inventario[i] = {
-        nome: "",
-        quantidade: 0,
-        sprite: -1
-    };
-}
 
 alarm[0] = -1;
 

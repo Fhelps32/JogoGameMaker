@@ -2,12 +2,7 @@ jogador = obj_player;
 
 escala = 3;
 
-// Imagem de fundo
-sprite_index = spr_inventario; // a sprite que você mandou
-
-// Posição fixa na tela (GUI)
-x = display_get_gui_width() / 2 - sprite_get_width(sprite_index) / 2;
-y = display_get_gui_height() / 2 - sprite_get_height(sprite_index) / 2;
+inventario_aberto = false;	
 
 // Dados de slots
 slot_tamanho = 16;
@@ -19,4 +14,32 @@ slot_y_inicial = 24;
 
 
 // Controle do item que o mouse está segurando
-item_selecionado = noone;
+;
+
+
+//ss mlk eu tentei desenhar a porra duma picareta em pixel art e deu naquilo dali msm
+enum Itens{
+	Picareta,
+	Machado,
+	Madeira,
+	Pedra,
+	Altura
+}
+
+enum Infos{
+	Item,
+	Quantidade,
+	Altura
+}
+
+ds_inventario = ds_grid_create(Infos.Altura, slots_por_coluna * slots_por_linha);
+ds_grid_set_region(ds_inventario, 0, 0, 1, (slots_por_coluna * slots_por_linha)- 1, -1)
+
+item_selecionado = [-1, -1];
+
+
+ds_grid_set(ds_inventario, Infos.Item, 0, Itens.Picareta);
+ds_grid_set(ds_inventario, Infos.Quantidade, 0, 1);
+
+ds_grid_set(ds_inventario, Infos.Item, 1, Itens.Madeira);
+ds_grid_set(ds_inventario, Infos.Quantidade, 1,	25);
