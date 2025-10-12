@@ -27,10 +27,21 @@ if(inventario_aberto){
 			if(point_in_rectangle(mx, my, sx, sy, sx + slot_tam, sy + slot_tam)){
 				draw_sprite_ext(spr_invBox, 0, sx, sy, escala, escala, 0, 0, 1);
 				if(mouse_check_button_pressed(mb_left)){
-					if(item_selecionado == [-1, -1]){
-						item_selecionado = [ds_inventario[# Infos.Item, item], ds_inventario[Infos.Quantidade, item]];
+					if(item_selecionado[0] == -1 and item_selecionado[1] == -1){
+						item_selecionado = [ds_inventario[# Infos.Item, item], ds_inventario[# Infos.Quantidade, item]];
+						ds_inventario[# Infos.Item, item] = -1;
+						ds_inventario[# Infos.Quantidade, item] = -1;
 					}else{
-							
+						if(item_selecionado[0] == ds_inventario[# Infos.Item, item]){
+							ds_grid_add(ds_inventario, Infos.Quantidade, item, item_selecionado[1]);
+							item_selecionado = [-1, -1];
+						}
+						if(item_selecionado[0] != ds_inventario[# Infos.Item, item] and item_selecionado[0] != -1){
+							item_selecionado_buffer = [ds_inventario[# Infos.Item, item], ds_inventario[# Infos.Quantidade, item]];
+							ds_inventario[# Infos.Item, item] = item_selecionado[0];
+							ds_inventario[# Infos.Quantidade, item] = item_selecionado[1];
+							item_selecionado = item_selecionado_buffer;
+						}
 					}
 				}
 			}
@@ -40,8 +51,9 @@ if(inventario_aberto){
 				draw_text(sx, sy, ds_inventario[# Infos.Quantidade, item]);
 			}
 			
-			if(item_selecionado != [-1, -1]){
-				draw_sprite(spr_itens, item_selecionado[0], mx, my);	
+			if(item_selecionado[0] != -1 and item_selecionado[1] != -1){
+				draw_sprite_ext(spr_itens, item_selecionado[0], mx + 10, my + 10, escala, escala, 0, c_white, 1);
+				draw_text(mx + 5, my + 5, item_selecionado[1]);
 			}
 			
 			item++;
