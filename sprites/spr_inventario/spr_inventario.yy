@@ -2,7 +2,7 @@
   "$GMSprite":"",
   "%Name":"spr_inventario",
   "bboxMode":0,
-  "bbox_bottom":202,
+  "bbox_bottom":140,
   "bbox_left":0,
   "bbox_right":234,
   "bbox_top":0,

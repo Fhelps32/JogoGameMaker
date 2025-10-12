@@ -14,7 +14,7 @@ slot_y_inicial = 24;
 
 
 // Controle do item que o mouse está segurando
-;
+
 
 
 //ss mlk eu tentei desenhar a porra duma picareta em pixel art e deu naquilo dali msm
@@ -32,8 +32,8 @@ enum Infos{
 	Altura
 }
 
-ds_inventario = ds_grid_create(Infos.Altura, slots_por_coluna * slots_por_linha);
-ds_grid_set_region(ds_inventario, 0, 0, 1, (slots_por_coluna * slots_por_linha)- 1, -1)
+ds_inventario = ds_grid_create(Infos.Altura, (slots_por_coluna * slots_por_linha) + 1);
+ds_grid_set_region(ds_inventario, 0, 0, 1, (slots_por_coluna * slots_por_linha + 1)- 1, -1)
 
 item_selecionado = [-1, -1];
 item_selecionado_buffer = [-1, -1];
@@ -47,3 +47,6 @@ ds_grid_set(ds_inventario, Infos.Quantidade, 2, 3);
 
 ds_grid_set(ds_inventario, Infos.Item, 1, Itens.Madeira);
 ds_grid_set(ds_inventario, Infos.Quantidade, 1,	25);
+
+ds_grid_set(ds_inventario, Infos.Item, 24, Itens.Madeira);
+ds_grid_set(ds_inventario, Infos.Quantidade, 24, 25)
