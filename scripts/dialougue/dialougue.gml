@@ -10,12 +10,12 @@ switch npc_name {
 		break;
 
 		case "npc2":
-			scr_add_text("npc1", spr_npc1, "O que você quer fazer?", 1);
+			scr_add_text("npc1", spr_npc2, "O que você quer fazer?", 1);
 			scr_add_choice("", ["Alimentar", "Coletar recursos"]);
 		break;
 
 		case "npc3":
-			scr_add_text("npc1", spr_npc1, "O que você quer fazer?", 1);
+			scr_add_text("npc1", spr_npc3, "O que você quer fazer?", 1);
 			scr_add_choice("", ["Alimentar", "Coletar recursos"]);
 		break;
 	}
