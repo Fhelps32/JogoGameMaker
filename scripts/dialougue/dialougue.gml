@@ -3,11 +3,20 @@
 function scr_text(){
 	//SWITCH PARA SABER QUAL NOME, SPRITE, FALA, LADO DA FOTO VAI SER DIDA NO DIÁLOGO
 	
-	switch npc_name {
+switch npc_name {
 		case "npc1":
-			scr_add_text("npc1", spr_player_idle_front, "Teste dialogo...", 0);
-			scr_add_text("npc1", spr_npc2, "Tesde de velocidade de escrita e troca de lado e quebra de linha... teste teste, aaa aa aaaaa aaaaaa aaaa aaaaaaaa aa aaaaa aaaaaaaaaa aaa aaaa aaaa aaaa aaaaaa", 1);
-			scr_add_text("Player", spr_player_idle_front, "teste teste teste teste teste, aa aaaaaaaa aaaaaaa aaaaa aa aaaaa aa aa aaaa aaaaaa aaaaa aaaaa aaaaaa a aaaaaaa", 0);
+			scr_add_text("npc1", spr_npc1, "O que você quer fazer?", 1);
+			scr_add_choice("", ["Alimentar", "Coletar recursos"]);
+		break;
+
+		case "npc2":
+			scr_add_text("npc1", spr_npc1, "O que você quer fazer?", 1);
+			scr_add_choice("", ["Alimentar", "Coletar recursos"]);
+		break;
+
+		case "npc3":
+			scr_add_text("npc1", spr_npc1, "O que você quer fazer?", 1);
+			scr_add_choice("", ["Alimentar", "Coletar recursos"]);
 		break;
 	}
 }
@@ -37,4 +46,25 @@ function scr_add_text(){
 	_grid[# 2, _y] = argument[2];
 	_grid[# 3, _y] = argument[3];
 }
+
+function scr_add_choice(_prompt, _opcoes) {
+    global.choice_prompt = _prompt;
+    global.choice_opcoes = _opcoes;
+    global.choice_index = -1; // nenhuma escolhida
+    global.choice_ativa = true;
+}
+
+function scr_choice_escolhida(index) {
+    var opcao = global.choice_opcoes[index];
+
+    switch(opcao) {
+        case "Alimentar":
+            show_message("Você escolheu alimentar!");
+            break;
+        case "Coletar recursos":
+            show_message("Você escolheu coletar recursos!");
+            break;
+    }
+}
+
 

@@ -18,6 +18,27 @@ if (atv == false){
 	}
 }
 
+if (global.choice_ativa) {
+    var _yy = display_get_gui_height();
+    var prompt = global.choice_prompt;
+    var opcoes = global.choice_opcoes;
 
+    draw_set_color(c_white);
+    draw_text(232, _yy - 220, prompt);
+
+    var x_btn = 60;
+    var y_btn = _yy - 120;
+    var largura = 200;
+    var altura = 32;
+    var espaco = 40;
+
+    for (var i = 0; i < array_length(opcoes); i++) {
+        var texto = opcoes[i];
+        draw_set_color(c_dkgray);
+        draw_rectangle(x_btn, y_btn + i * espaco, x_btn + largura, y_btn + altura + i * espaco, false);
+        draw_set_color(c_white);
+        draw_text(x_btn + 10, y_btn + 8 + i * espaco, texto);
+    }
+}
 
 

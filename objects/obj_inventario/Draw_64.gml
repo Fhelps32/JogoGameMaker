@@ -52,8 +52,22 @@ if(inventario_aberto){
 				#region Clica com o botão direito do mouse
 				if(mouse_check_button_pressed(mb_right)){
 					if(item_selecionado[0] == -1 and item_selecionado[1] == -1){
-						item_selecionado = [ds_inventario[# Infos.Item, item], (ds_inventario[# Infos.Quantidade, item] div 2) + (ds_inventario[# Infos.Quantidade, item] mod 2)];
-						ds_inventario[# Infos.Quantidade, item] = ds_inventario[# Infos.Quantidade, item] - item_selecionado[1];
+						if(ds_inventario[# Infos.Quantidade, item] div 2 >= 1){
+							item_selecionado = [ds_inventario[# Infos.Item, item], (ds_inventario[# Infos.Quantidade, item] div 2) + (ds_inventario[# Infos.Quantidade, item] mod 2)];
+							ds_inventario[# Infos.Quantidade, item] = ds_inventario[# Infos.Quantidade, item] - item_selecionado[1];
+						}
+					}else{
+						if(ds_inventario[# Infos.Item, item] == item_selecionado[0]){
+								ds_inventario[# Infos.Quantidade, item] = ds_inventario[# Infos.Quantidade, item] + 1;
+								item_selecionado[1] = item_selecionado[1] -1;
+						}
+						if(ds_inventario[# Infos.Item, item] == -1){
+							ds_inventario[# Infos.Item, item] = item_selecionado[0];
+							ds_inventario[# Infos.Quantidade, item] = 1;
+							item_selecionado[1] = item_selecionado[1] -1;
+							
+							
+						}
 					}
 				}
 				#endregion
@@ -69,6 +83,10 @@ if(inventario_aberto){
 				draw_text(mx + 5, my + 5, item_selecionado[1]);
 			}
 			
+			if(item_selecionado[1] <= 0) {
+				item_selecionado[0] = -1;
+				item_selecionado[1] = -1;
+			}
 			
 			item++;
 			if(item >= 25){

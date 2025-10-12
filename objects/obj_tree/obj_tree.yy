@@ -2,20 +2,20 @@
   "$GMObject":"",
   "%Name":"obj_tree",
   "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"obj_tree",
-  "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_transparent","path":"objects/obj_transparent/obj_transparent.yy",},"propertyId":{"name":"transparent","path":"objects/obj_transparent/obj_transparent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"True",},
-  ],
+  "overriddenProperties":[],
   "parent":{
     "name":"Level",
     "path":"folders/Objetos/Level.yy",
   },
   "parentObjectId":{
-    "name":"obj_transparent",
-    "path":"objects/obj_transparent/obj_transparent.yy",
+    "name":"obj_enemys",
+    "path":"objects/obj_enemys/obj_enemys.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

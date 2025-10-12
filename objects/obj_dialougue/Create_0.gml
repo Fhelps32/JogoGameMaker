@@ -7,6 +7,10 @@ caracter = 0;
 
 atv = true
 
+global.choice_ativa = false;
+global.choice_prompt = "";
+global.choice_opcoes = [];
+global.choice_escolhida = -1;
 
 
 
