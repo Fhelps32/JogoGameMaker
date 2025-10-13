@@ -4,17 +4,23 @@ function scr_text(){
 	//SWITCH PARA SABER QUAL NOME, SPRITE, FALA, LADO DA FOTO VAI SER DIDA NO DIÁLOGO
 	
 	switch npc_name {
-			case "npc1":
-				scr_add_text("npc1", spr_npc1, "O que você quer fazer?", 1);
-				scr_add_choice("", ["Alimentar", "Coletar recursos"]);
+			case "Jack":
+				scr_add_text("Jack", spr_npc1, "Sinceramente eu não sei mais o que fazer...", 1);
+				scr_add_text("Jack", spr_npc1, "A Ross já pegou todos os recurso dizendo que é ele que manda nessa ilha agora, só porque ele se diz o mais forte", 1);
 			break;
 
-		case "npc2":
-			scr_add_text("npc1", spr_npc2, "O que você quer fazer?", 1);
-			scr_add_choice("", ["Alimentar", "Coletar recursos"]);
+		case "Ross":
+			scr_add_text("npc1", spr_npc2, "O Jack vive me enchendo o saco...", 1);
+			scr_add_text("npc1", spr_npc2, "Já falei pra aquele grilinho que não aguenta nem o próprio peso ficar longe das minhas coisas...", 1);
+			scr_add_text("npc1", spr_player_idle_front, "Tenta pegar leve com ele Ross...", 0);
+			scr_add_text("npc1", spr_npc2, "PEGAR LEVE???...", 1);
+			scr_add_text("npc1", spr_npc2, "EU TO PRESO NUMA ILHA DESERTA SEM NINGÉM ALEM DE EU E MAIS 3 IMBECIS...", 1);
+			scr_add_text("npc1", spr_npc2, "E VC QUER QUE EU PEGUE LEVE???...", 1);
+			scr_add_text("npc1", spr_player_idle_front, "Ross eu sei que a situação é complicada, mas se a gente não conseguir trabalhar junto não vamos conseguir durar muito tempo...", 0);
+			scr_add_text("npc1", spr_npc2, "Só cala a sua boca e vai embora por favor", 1);
 		break;
 
-		case "npc3":
+		case "Livia":
 			scr_add_text("npc1", spr_npc3, "O que você quer fazer?", 1);
 			scr_add_choice("", ["Alimentar", "Coletar recursos"]);
 		break;

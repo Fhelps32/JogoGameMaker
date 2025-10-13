@@ -1,2 +1,2 @@
 event_inherited();
-name = "npc3";
+name = "Livia";

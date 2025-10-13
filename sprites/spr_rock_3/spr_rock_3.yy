@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":7,
   "parent":{
-    "name":"Pedras",
-    "path":"folders/Sprites/Level/Sprites/Pedras.yy",
+    "name":"Crescida",
+    "path":"folders/Sprites/Level/Sprites/Pedras/Crescida.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

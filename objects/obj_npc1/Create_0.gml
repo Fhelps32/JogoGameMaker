@@ -1,5 +1,5 @@
 event_inherited();
-name = "npc1";
+name = "Jack";
 
 
 

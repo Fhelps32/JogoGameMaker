@@ -3,6 +3,7 @@
   "%Name":"obj_rock",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"obj_rock",
@@ -12,8 +13,8 @@
     "path":"folders/Objetos/Level.yy",
   },
   "parentObjectId":{
-    "name":"obj_transparent",
-    "path":"objects/obj_transparent/obj_transparent.yy",
+    "name":"obj_enemys",
+    "path":"objects/obj_enemys/obj_enemys.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

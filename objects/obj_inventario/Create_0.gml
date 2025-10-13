@@ -42,11 +42,6 @@ item_selecionado_buffer = [-1, -1];
 ds_grid_set(ds_inventario, Infos.Item, 0, Itens.Picareta);
 ds_grid_set(ds_inventario, Infos.Quantidade, 0, 1);
 
-ds_grid_set(ds_inventario, Infos.Item, 2, Itens.Picareta);
-ds_grid_set(ds_inventario, Infos.Quantidade, 2, 3);
 
-ds_grid_set(ds_inventario, Infos.Item, 1, Itens.Madeira);
-ds_grid_set(ds_inventario, Infos.Quantidade, 1,	25);
-
-ds_grid_set(ds_inventario, Infos.Item, 24, Itens.Pedra);
-ds_grid_set(ds_inventario, Infos.Quantidade, 24, 25)
+ds_grid_set(ds_inventario, Infos.Item, 1, Itens.Machado);
+ds_grid_set(ds_inventario, Infos.Quantidade, 1,	1);
