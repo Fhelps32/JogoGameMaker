@@ -1,4 +1,4 @@
-	jogador = obj_player;
+jogador = obj_player;
 
 escala = 3;
 
@@ -18,7 +18,7 @@ slot_y_inicial = 24;
 
 
 //ss mlk eu tentei desenhar a porra duma picareta em pixel art e deu naquilo dali msm
-enum Itens{
+ enum Itens{
 	Picareta,
 	Machado,
 	Madeira,

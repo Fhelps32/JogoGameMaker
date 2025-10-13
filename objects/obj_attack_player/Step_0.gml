@@ -10,7 +10,7 @@ for (var i = 0; i < ds_list_size(_list); i++){
 		array_push(lista, _atual);
 		with (_atual){
 			if (!dead){
-				lidando_dano(1);	
+				lidando_dano(1, obj_inventario.ds_inventario[# Infos.Item, 24]);	
 			}	
 		}
 	}

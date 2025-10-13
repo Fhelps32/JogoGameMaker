@@ -2,9 +2,11 @@
 dead = false;
 range = 7
 
-lidando_dano = function(_dano){
-		troca_estado(estado_hurt);
-		vida = vida - _dano;
+lidando_dano = function(_dano, _item){
+		if(_item == quebra_com){
+			troca_estado(estado_hurt);
+			vida = vida - _dano;	
+		}
 }
 
 //todos os estados q cada inimigo terá:

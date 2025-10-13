@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":7,
   "parent":{
-    "name":"Arvores",
-    "path":"folders/Sprites/Level/Sprites/Arvores.yy",
+    "name":"Crescida",
+    "path":"folders/Sprites/Level/Sprites/Arvores/Crescida.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

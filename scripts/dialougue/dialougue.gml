@@ -3,11 +3,11 @@
 function scr_text(){
 	//SWITCH PARA SABER QUAL NOME, SPRITE, FALA, LADO DA FOTO VAI SER DIDA NO DIÁLOGO
 	
-switch npc_name {
-		case "npc1":
-			scr_add_text("npc1", spr_npc1, "O que você quer fazer?", 1);
-			scr_add_choice("", ["Alimentar", "Coletar recursos"]);
-		break;
+	switch npc_name {
+			case "npc1":
+				scr_add_text("npc1", spr_npc1, "O que você quer fazer?", 1);
+				scr_add_choice("", ["Alimentar", "Coletar recursos"]);
+			break;
 
 		case "npc2":
 			scr_add_text("npc1", spr_npc1, "O que você quer fazer?", 1);

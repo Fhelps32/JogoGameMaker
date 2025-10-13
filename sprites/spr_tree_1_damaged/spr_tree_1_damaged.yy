@@ -28,8 +28,8 @@
   "nineSlice":null,
   "origin":7,
   "parent":{
-    "name":"Arvores",
-    "path":"folders/Sprites/Level/Sprites/Arvores.yy",
+    "name":"Dano",
+    "path":"folders/Sprites/Level/Sprites/Arvores/Dano.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
