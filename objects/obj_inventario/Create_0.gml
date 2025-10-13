@@ -21,8 +21,8 @@ slot_y_inicial = 24;
  enum Itens{
 	Picareta,
 	Machado,
-	Madeira,
 	Pedra,
+	Madeira,
 	Altura
 }
 
@@ -48,5 +48,5 @@ ds_grid_set(ds_inventario, Infos.Quantidade, 2, 3);
 ds_grid_set(ds_inventario, Infos.Item, 1, Itens.Madeira);
 ds_grid_set(ds_inventario, Infos.Quantidade, 1,	25);
 
-ds_grid_set(ds_inventario, Infos.Item, 24, Itens.Madeira);
+ds_grid_set(ds_inventario, Infos.Item, 24, Itens.Pedra);
 ds_grid_set(ds_inventario, Infos.Quantidade, 24, 25)

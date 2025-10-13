@@ -3,6 +3,8 @@ transparent = true;
 vida = 3;
 quebra_com = 0;
 var numero = irandom_range(1, 4);
+
+
 sprite = {
 }
 
@@ -55,7 +57,7 @@ estado_hurt.roda = function(){
 }
 
 estado_death.inicia = function(){	
-	sprite_index = spr_enemy_slime2_death;
+	sprite_index = spr_aviao
 }
 
 inicia_estado(estado_idle);

@@ -12,7 +12,10 @@
     "name":"Pais",
     "path":"folders/Objetos/Pais.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_colide",
+    "path":"objects/obj_colide/obj_colide.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

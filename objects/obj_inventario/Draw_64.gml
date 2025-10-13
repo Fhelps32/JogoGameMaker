@@ -71,6 +71,20 @@ if(inventario_aberto){
 					}
 				}
 				#endregion
+				
+				#region Clica com a letra B pra poder dropar
+				if(keyboard_check_pressed(ord("B")) and ds_inventario[# Infos.Item, item] != -1){
+					var inst = instance_create_layer(jogador.x, jogador.y, "Player", obj_item);
+					inst.info_item = [
+						ds_inventario[# Infos.Item, item],
+						ds_inventario[# Infos.Quantidade, item]
+					];
+					
+					ds_inventario[# Infos.Item, item] = -1;
+					ds_inventario[# Infos.Quantidade, item] = -1;
+					
+				}
+				#endregion
 			}
 			
 			if(ds_inventario[# Infos.Item, item] != -1){

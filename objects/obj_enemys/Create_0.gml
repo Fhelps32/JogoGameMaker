@@ -21,6 +21,3 @@ inicia_estado(estado_idle); //todos os inimigos iniciarão no estado de "andando
 
 
 
-
-
-
