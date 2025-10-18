@@ -3,7 +3,7 @@ var my = device_mouse_y_to_gui(0)
 
 
 // Desenha o inventário
-if(inventario_aberto and pronta == false){
+if(inventario_aberto){
 	// varoáveis pra ajustar o inventário no centro da tela
 	var pos_x = (display_get_gui_width() / 2 - (sprite_get_width(spr_inv_jangada) * escala) / 2) + 235 * escala;
 	var pos_y = display_get_gui_height() / 2 - (sprite_get_height(spr_inv_jangada) * escala) / 2;
@@ -68,6 +68,12 @@ if(inventario_aberto and pronta == false){
 			if(ds_inventario[# Infos.Item, item] != -1){
 				draw_sprite_ext(spr_itens, ds_inventario[# Infos.Item, item], sx, sy, escala, escala, 0, c_white, 1);
 				draw_text(sx, sy, ds_inventario[# Infos.Quantidade, item]);
+			}else{
+				if(item == 0){
+					draw_sprite_ext(spr_itens, Itens.Madeira, sx, sy, escala, escala, 0, c_white, 0.4);
+				}else{
+					draw_sprite_ext(spr_itens, Itens.Pedra, sx, sy, escala, escala, 0, c_white, 0.4);
+				}
 			}
 			
 			if(obj_inventario.item_selecionado[0] != -1 and obj_inventario.item_selecionado[1] != -1){
@@ -79,6 +85,10 @@ if(inventario_aberto and pronta == false){
 				obj_inventario.item_selecionado[0] = -1;
 				obj_inventario.item_selecionado[1] = -1;
 			}
+				
+			if(ds_inventario[# Infos.Item, item] != -1){
+					draw_sprite_ext(spr_itens, ds_inventario[# Infos.Item, item], sx, sy, escala, escala, 0, c_white, 1);		
+				}
 			
 			item++
 			if(item >= 2){
@@ -86,5 +96,28 @@ if(inventario_aberto and pronta == false){
 			}
 		}
 	}
+	
+	if(ds_inventario[# Infos.Item, 2] != -1){
+			draw_sprite_ext(spr_itens, ds_inventario[# Infos.Item, 2], pos_x + (25 * escala), pos_y + (51 * escala), escala, escala, 0, c_white, 1);
+			draw_text( pos_x + (25 * escala), pos_y + (51 * escala), ds_inventario[# Infos.Quantidade, 2]);
+		}
+	
+	if(point_in_rectangle(mx, my, pos_x + (25 * escala), pos_y + (51 * escala), pos_x + (25 * escala) + slot_tam, pos_y + (51 * escala) + slot_tam)){
+		draw_sprite_ext(spr_invBox, 0, pos_x + (25 * escala), pos_y + (51 * escala), escala, escala, 0, c_white, 1);
 		
+		if(mouse_check_button_pressed(mb_left)){
+			if(obj_inventario.item_selecionado[0] == -1 and obj_inventario.item_selecionado[1] == -1){
+				obj_inventario.item_selecionado = [ds_inventario[# Infos.Item, 2], ds_inventario[# Infos.Quantidade, 2]]
+				ds_inventario[# Infos.Item, 2] = -1;
+				ds_inventario[# Infos.Quantidade, 2] = -1;
+			}
+		}
+	}
+		
+	if(point_in_rectangle(mx, my, pos_x + (45 * escala), pos_y + (55 * escala), pos_x + (45 * escala) + (18 * escala), pos_y + (55 * escala) + (12 * escala))){
+		draw_sprite_ext(spr_invBox, 0, pos_x + (45 * escala), pos_y + (55 * escala), escala + 0.4, escala - 0.4, 0, c_white, 1);
+		if(mouse_check_button_pressed(mb_left) and ds_inventario[# Infos.Item, 2] == -1){
+			fazerCrafting(itens_depositados[0], itens_depositados[1]);
+		}
+	}
 }

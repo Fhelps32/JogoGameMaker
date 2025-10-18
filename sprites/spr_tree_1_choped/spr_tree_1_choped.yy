@@ -2,7 +2,7 @@
   "$GMSprite":"",
   "%Name":"spr_tree_1_choped",
   "bboxMode":2,
-  "bbox_bottom":57,
+  "bbox_bottom":55,
   "bbox_left":18,
   "bbox_right":29,
   "bbox_top":47,

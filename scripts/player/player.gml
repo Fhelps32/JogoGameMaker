@@ -1,6 +1,9 @@
 function scr_hcolision(){
 	//COLISÃO HORIZONTAL
 	if place_meeting(x + hspd, y, obj_colide){ 
+		if(place_meeting(x, y, obj_colide)){
+			x+= sign(hspd);
+		}
 		while !place_meeting(x + sign(hspd), y, obj_colide){
 			x+= sign(hspd);
 		}
@@ -12,6 +15,9 @@ function scr_hcolision(){
 function scr_vcolision(){
 	//COLISÃO VERTICAL
 	if place_meeting(x , y + vspd, obj_colide){
+		if(place_meeting(x, y, obj_colide)){
+			x+= sign(hspd);
+		}
 		while !place_meeting(x, y + sign(vspd), obj_colide){
 			y+= sign(vspd);
 		}

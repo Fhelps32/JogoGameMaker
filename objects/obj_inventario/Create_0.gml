@@ -23,6 +23,7 @@ slot_y_inicial = 24;
 	Machado,
 	Pedra,
 	Madeira,
+	Graveto,
 	Altura
 }
 
