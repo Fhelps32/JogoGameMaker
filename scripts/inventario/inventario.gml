@@ -28,24 +28,27 @@
 	}
 	
 function fazerCrafting(_madeira, _pedra){
-	if(_madeira == 1 and _pedra == 1){
+	if(_madeira == 5 and _pedra == 5){
 		ds_grid_set(ds_inventario, Infos.Item, 2, Itens.Picareta);
 		ds_grid_set(ds_inventario, Infos.Quantidade, 2, 1);	
 		ds_grid_set_region(ds_inventario, 0, 0, 1, 1, -1)
 	}
-	if(_madeira == 2 and _pedra == 1){
-		ds_grid_set(ds_inventario, Infos.Item, 2, Itens.Machado);
-		ds_grid_set(ds_inventario, Infos.Quantidade, 2, 1);
+	if(_madeira == 0 and _pedra == 5){
+		ds_grid_set(ds_inventario, Infos.Item, 2, Itens.Pedregulho);
+		ds_grid_set(ds_inventario, Infos.Quantidade, 2, 10);
 		ds_grid_set_region(ds_inventario, 0, 0, 1, 1, -1)
 	}
-	if(_madeira == 2 and _pedra == 2){
-		ds_grid_set(ds_inventario, Infos.Item, 2, Itens.Picareta);
-		ds_grid_add(ds_inventario, Infos.Quantidade, 2, 1);
+	if(_madeira == 10 and _pedra == 10){
+		ds_grid_set(ds_inventario, Infos.Item, 2, Itens.Caixa);
+		ds_grid_add(ds_inventario, Infos.Quantidade, 2, 2);
 		ds_grid_set_region(ds_inventario, 0, 0, 1, 1, -1)
 	}
-	if(_madeira == 1 and _pedra == 0){
+	if(_madeira == 5 and _pedra == 0){
 		ds_grid_set(ds_inventario, Infos.Item, 2, Itens.Graveto);
 		ds_grid_set(ds_inventario, Infos.Quantidade, 2, 10);	
 		ds_grid_set_region(ds_inventario, 0, 0, 1, 1, -1)
 	}
+}
+
+function verifica(){
 }

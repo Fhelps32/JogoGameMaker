@@ -1,20 +1,19 @@
 {
   "$GMObject":"",
-  "%Name":"obj_post_front",
+  "%Name":"obj_jangada_true",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_post_front",
+  "name":"obj_jangada_true",
   "overriddenProperties":[],
   "parent":{
-    "name":"Postes",
-    "path":"folders/Objetos/Level/Postes.yy",
+    "name":"Level",
+    "path":"folders/Objetos/Level.yy",
   },
-  "parentObjectId":{
-    "name":"obj_colide",
-    "path":"objects/obj_colide/obj_colide.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -32,10 +31,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_post_front",
-    "path":"sprites/spr_post_front/spr_post_front.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

@@ -18,7 +18,7 @@ estado_idle.roda = function(){
 	if(vspd != 0 or hspd != 0){
 		troca_estado(estado_walk)	
 	}
-	if (attack and obj_inventario.ds_inventario[# Infos.Item, 24] != -1){
+	if (attack and (obj_inventario.ds_inventario[# Infos.Item, 24] == Itens.Picareta or obj_inventario.ds_inventario[# Infos.Item, 24] == Itens.Machado)){
 		troca_estado(estado_attack);		
 	}
 	show_debug_message("rodando idle_roda");
@@ -46,7 +46,7 @@ estado_walk.roda = function(){
 		troca_estado(estado_idle);	
 	}
 	
-	if (attack and obj_inventario.ds_inventario[# Infos.Item, 24] != -1){
+	if (attack and (obj_inventario.ds_inventario[# Infos.Item, 24] == Itens.Picareta or obj_inventario.ds_inventario[# Infos.Item, 24] == Itens.Machado)){
 		troca_estado(estado_attack);		
 	}
 	 

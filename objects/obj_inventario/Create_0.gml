@@ -24,6 +24,8 @@ slot_y_inicial = 24;
 	Pedra,
 	Madeira,
 	Graveto,
+	Pedregulho,
+	Caixa,
 	Altura
 }
 

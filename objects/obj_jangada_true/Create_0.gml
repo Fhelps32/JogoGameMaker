@@ -1,9 +1,8 @@
-depth = obj_inventario.depth + 0.5;
+sprite_index = spr_jangada_andamento;
 
 itens_depositados = [0, 0];
 
-
-escala = 3;
+escala = 1;
 
 inventario_aberto = false;	
 

@@ -1,7 +1,9 @@
 {
   "$GMObject":"",
   "%Name":"obj_post_side_right",
-  "eventList":[],
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
   "name":"obj_post_side_right",
   "overriddenProperties":[],
@@ -10,8 +12,8 @@
     "path":"folders/Objetos/Level/Postes.yy",
   },
   "parentObjectId":{
-    "name":"obj_transparent",
-    "path":"objects/obj_transparent/obj_transparent.yy",
+    "name":"obj_colide",
+    "path":"objects/obj_colide/obj_colide.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
